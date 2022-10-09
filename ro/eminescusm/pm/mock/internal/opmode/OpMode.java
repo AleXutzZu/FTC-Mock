@@ -2,7 +2,6 @@ package ro.eminescusm.pm.mock.internal.opmode;
 
 import ro.eminescusm.pm.mock.internal.gamepad.Gamepad;
 import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
-import ro.eminescusm.pm.mock.internal.impl.HardwareMapImpl;
 import ro.eminescusm.pm.mock.internal.impl.TelemetryImpl;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Autonomous;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
@@ -12,27 +11,22 @@ public abstract class OpMode {
     /**
      * The hardware map for the op mode
      */
-    protected final HardwareMap hardwareMap = new HardwareMapImpl();
+    protected HardwareMap hardwareMap = null;
 
     /**
      * Gamepad 1
      */
-    protected final Gamepad gamepad1 = null;
+    protected Gamepad gamepad1 = null;
 
     /**
      * Gamepad 2
      */
-    protected final Gamepad gamepad2 = null;
-
-    protected final int msStuckDetectInit = 10000;
-    protected final int msStuckDetectInitLoop = 10000;
-    protected final int msStuckDetectStart = 10000;
-    protected final int msStuckDetectLoop = 10000;
+    protected Gamepad gamepad2 = null;
 
     /**
      * The telemetry for the op mode
      */
-    protected final Telemetry telemetry = new TelemetryImpl();
+    public Telemetry telemetry = null;
 
     /**
      * Number of seconds this op mode has been running
