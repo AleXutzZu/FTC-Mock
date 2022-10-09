@@ -4,4 +4,4 @@ Repo-ul acesta este o copie a anumitor functionalitati de baza din SDK-ul de la 
 in afara unui mediu Android (cu un robot real).
 
 ## Cum se foloseste
-In [me.alexutzzu.mock](./me/alexutzzu/mock) se gasesc clasele implementate
+In [me.alexutzzu.mock](ro/eminescusm/pm/mock) se gasesc clasele implementate

@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.gamepad;
+package ro.eminescusm.pm.mock.internal.gamepad;
 
 public abstract class Gamepad {
     public boolean a;

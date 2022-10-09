@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.opmode;
+package ro.eminescusm.pm.mock.internal.opmode;
 
 public abstract class LinearOpMode extends OpMode {
 

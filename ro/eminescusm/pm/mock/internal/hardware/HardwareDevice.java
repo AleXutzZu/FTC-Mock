@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.hardware;
+package ro.eminescusm.pm.mock.internal.hardware;
 
 public interface HardwareDevice {
     /**

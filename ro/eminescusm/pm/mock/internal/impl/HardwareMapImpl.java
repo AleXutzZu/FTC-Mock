@@ -1,6 +1,6 @@
-package me.alexutzzu.mock.internal.impl;
+package ro.eminescusm.pm.mock.internal.impl;
 
-import me.alexutzzu.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
 
 import java.util.HashMap;
 
@@ -8,10 +8,10 @@ public class HardwareMapImpl implements HardwareMap {
     private final HashMap<String, Object> devices = new HashMap<>();
 
     public HardwareMapImpl() {
-        devices.put("leftFront", new me.alexutzzu.mock.internal.impl.DcMotorImpl("leftFront"));
-        devices.put("rightFront", new me.alexutzzu.mock.internal.impl.DcMotorImpl("rightFront"));
-        devices.put("leftBack", new me.alexutzzu.mock.internal.impl.DcMotorImpl("leftBack"));
-        devices.put("rightBack", new me.alexutzzu.mock.internal.impl.DcMotorImpl("rightBack"));
+        devices.put("leftFront", new DcMotorImpl("leftFront"));
+        devices.put("rightFront", new DcMotorImpl("rightFront"));
+        devices.put("leftBack", new DcMotorImpl("leftBack"));
+        devices.put("rightBack", new DcMotorImpl("rightBack"));
     }
 
     @Override

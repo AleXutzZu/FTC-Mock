@@ -1,7 +1,7 @@
-package me.alexutzzu.mock.external.opmode;
+package ro.eminescusm.pm.mock.external.opmode;
 
-import me.alexutzzu.mock.internal.opmode.annotations.Disabled;
-import me.alexutzzu.mock.internal.opmode.OpMode;
+import ro.eminescusm.pm.mock.internal.opmode.annotations.Disabled;
+import ro.eminescusm.pm.mock.internal.opmode.OpMode;
 
 import java.util.Scanner;
 

@@ -1,12 +1,12 @@
-package me.alexutzzu.mock.internal.opmode;
+package ro.eminescusm.pm.mock.internal.opmode;
 
-import me.alexutzzu.mock.internal.gamepad.Gamepad;
-import me.alexutzzu.mock.internal.hardwareMap.HardwareMap;
-import me.alexutzzu.mock.internal.impl.HardwareMapImpl;
-import me.alexutzzu.mock.internal.impl.TelemetryImpl;
-import me.alexutzzu.mock.internal.opmode.annotations.Autonomous;
-import me.alexutzzu.mock.internal.opmode.annotations.TeleOp;
-import me.alexutzzu.mock.internal.telemetry.Telemetry;
+import ro.eminescusm.pm.mock.internal.gamepad.Gamepad;
+import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.internal.impl.HardwareMapImpl;
+import ro.eminescusm.pm.mock.internal.impl.TelemetryImpl;
+import ro.eminescusm.pm.mock.internal.opmode.annotations.Autonomous;
+import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
+import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
 
 public abstract class OpMode {
     /**

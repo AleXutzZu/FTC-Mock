@@ -1,7 +1,7 @@
-package me.alexutzzu.mock.internal.impl;
+package ro.eminescusm.pm.mock.internal.impl;
 
-import me.alexutzzu.mock.internal.telemetry.Func;
-import me.alexutzzu.mock.internal.telemetry.Telemetry;
+import ro.eminescusm.pm.mock.internal.telemetry.Func;
+import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
 
 public class TelemetryImpl implements Telemetry {
 

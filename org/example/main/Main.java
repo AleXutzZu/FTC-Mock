@@ -1,6 +1,6 @@
 package org.example.main;
 
-import me.alexutzzu.mock.external.opmode.StartOpMode;
+import ro.eminescusm.pm.mock.external.opmode.StartOpMode;
 import org.example.opmode.BasicOpMode;
 
 public class Main {

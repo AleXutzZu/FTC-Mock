@@ -1,7 +1,7 @@
-package me.alexutzzu.mock.external;
+package ro.eminescusm.pm.mock.external;
 
-import me.alexutzzu.mock.internal.hardwareMap.HardwareMap;
-import me.alexutzzu.mock.internal.motor.DcMotor;
+import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.internal.motor.DcMotor;
 
 public class RobotHardware {
     private DcMotor leftFront = null;

@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.telemetry;
+package ro.eminescusm.pm.mock.internal.telemetry;
 
 public interface Func<T> {
     /**

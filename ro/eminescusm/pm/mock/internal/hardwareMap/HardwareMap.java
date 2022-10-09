@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.hardwareMap;
+package ro.eminescusm.pm.mock.internal.hardwareMap;
 
 public interface HardwareMap {
 

@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.motor;
+package ro.eminescusm.pm.mock.internal.motor;
 
 public interface DcMotor extends DcMotorSimple {
     enum RunMode {

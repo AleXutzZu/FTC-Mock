@@ -1,7 +1,7 @@
 package org.example.opmode;
 
-import me.alexutzzu.mock.internal.opmode.OpMode;
-import me.alexutzzu.mock.internal.opmode.annotations.TeleOp;
+import ro.eminescusm.pm.mock.internal.opmode.OpMode;
+import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
 
 
 @TeleOp(name = "BasicOpMode", group = "Basic")

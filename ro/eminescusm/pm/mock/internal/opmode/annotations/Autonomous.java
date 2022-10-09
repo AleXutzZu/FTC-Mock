@@ -1,4 +1,4 @@
-package me.alexutzzu.mock.internal.opmode.annotations;
+package ro.eminescusm.pm.mock.internal.opmode.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
