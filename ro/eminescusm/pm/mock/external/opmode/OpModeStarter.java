@@ -2,16 +2,10 @@ package ro.eminescusm.pm.mock.external.opmode;
 
 import com.sun.istack.internal.NotNull;
 import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
-import ro.eminescusm.pm.mock.internal.motor.DcMotor;
-import ro.eminescusm.pm.mock.internal.opmode.LinearOpMode;
 import ro.eminescusm.pm.mock.internal.opmode.OpMode;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Disabled;
 
 import java.lang.reflect.Field;
-import java.util.Scanner;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class OpModeStarter {
     private final HardwareMap hardwareMap;
@@ -44,68 +38,30 @@ public class OpModeStarter {
             System.out.println("OpMode is disabled");
             return;
         }
+        System.out.println("Starting OpMode " + opMode.getName());
+
         internalOpModeSetup(opMode);
 
-        //LinearOpMode case
-        if (opMode instanceof LinearOpMode) {
-            ExecutorService executorService = Executors.newCachedThreadPool();
-            LinearOpMode linearOpMode = (LinearOpMode) opMode;
-            Callable<Void> startOpMode = () -> {
-                linearOpMode.runOpMode();
-                return null;
-            };
-
-            Callable<Void> changeOpModeState = () -> {
-                long initStartTime = System.currentTimeMillis();
-                while (System.currentTimeMillis() - initStartTime < initDuration) {
-                    //Do nothing
-
-                }
-                for (Field field : linearOpMode.getClass().getSuperclass().getDeclaredFields()) {
-                    if (field.getName().equals("isStarted")) {
-                        field.setAccessible(true);
-                        field.set(linearOpMode, true);
-                    }
-                }
-                long loopStartTime = System.currentTimeMillis();
-                while (System.currentTimeMillis() - loopStartTime < loopDuration) {
-                    //Do nothing
-
-                }
-                for (Field field : linearOpMode.getClass().getSuperclass().getDeclaredFields()) {
-                    if (field.getName().equals("stopRequested")) {
-                        field.setAccessible(true);
-                        field.set(linearOpMode, true);
-                        executorService.shutdown();
-                    }
-                }
-                return null;
-            };
-            executorService.submit(startOpMode);
-            executorService.submit(changeOpModeState);
-        }//OpMode case
-        else {
-            //Wait for all other threads to finish
-            Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-            opMode.init();
-            //use the loop for initDuration seconds
-            long initStartTime = System.currentTimeMillis();
-            while (System.currentTimeMillis() - initStartTime < initDuration) {
-                opMode.init_loop();
-            }
-            opMode.start();
-            //use the loop for loopDuration seconds
-            long loopStartTime = System.currentTimeMillis();
-            while (System.currentTimeMillis() - loopStartTime < loopDuration) {
-                opMode.loop();
-            }
-            opMode.stop();
+        opMode.init();
+        //use the loop for initDuration seconds
+        long initStartTime = System.currentTimeMillis();
+        while (System.currentTimeMillis() - initStartTime < initDuration) {
+            opMode.init_loop();
         }
+        opMode.start();
+        //use the loop for loopDuration seconds
+        long loopStartTime = System.currentTimeMillis();
+        while (System.currentTimeMillis() - loopStartTime < loopDuration) {
+            opMode.loop();
+        }
+        opMode.stop();
+
+        System.out.println("OpMode " + opMode.getName() + " finished");
     }
 
     private void internalOpModeSetup(@NotNull OpMode opMode) {
         try {
-            for (Field field : opMode.getClass().getSuperclass().getSuperclass().getDeclaredFields()) {
+            for (Field field : opMode.getClass().getSuperclass().getDeclaredFields()) {
                 if (field.getName().equals("hardwareMap")) {
                     field.setAccessible(true);
                     field.set(opMode, hardwareMap);
