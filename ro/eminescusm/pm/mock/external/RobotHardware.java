@@ -1,13 +1,13 @@
 package ro.eminescusm.pm.mock.external;
 
 import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
-import ro.eminescusm.pm.mock.internal.motor.DcMotor;
+import ro.eminescusm.pm.mock.internal.hardware.motor.DcMotor;
 
 public class RobotHardware {
-    private DcMotor leftFront = null;
-    private DcMotor rightFront = null;
-    private DcMotor leftBack = null;
-    private DcMotor rightBack = null;
+    private DcMotor leftFrontMotor = null;
+    private DcMotor rightFrontMotor = null;
+    private DcMotor leftBackMotor = null;
+    private DcMotor rightBackMotor = null;
 
     private final HardwareMap hardwareMap;
 
@@ -20,40 +20,40 @@ public class RobotHardware {
      * Initialize the robot hardware
      */
     public void init() {
-        leftFront = hardwareMap.get(DcMotor.class, "leftFront");
-        rightFront = hardwareMap.get(DcMotor.class, "rightFront");
-        leftBack = hardwareMap.get(DcMotor.class, "leftBack");
-        rightBack = hardwareMap.get(DcMotor.class, "rightBack");
+        leftFrontMotor = hardwareMap.get(DcMotor.class, "leftFront");
+        rightFrontMotor = hardwareMap.get(DcMotor.class, "rightFront");
+        leftBackMotor = hardwareMap.get(DcMotor.class, "leftBack");
+        rightBackMotor = hardwareMap.get(DcMotor.class, "rightBack");
 
-        leftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        leftBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        leftFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        leftBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        leftFront.setDirection(DcMotor.Direction.FORWARD);
-        rightFront.setDirection(DcMotor.Direction.REVERSE);
-        leftBack.setDirection(DcMotor.Direction.FORWARD);
-        rightBack.setDirection(DcMotor.Direction.REVERSE);
+        leftFrontMotor.setDirection(DcMotor.Direction.FORWARD);
+        rightFrontMotor.setDirection(DcMotor.Direction.REVERSE);
+        leftBackMotor.setDirection(DcMotor.Direction.FORWARD);
+        rightBackMotor.setDirection(DcMotor.Direction.REVERSE);
 
-        leftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rightFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        leftBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        leftFrontMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        rightFrontMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        leftBackMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        rightBackMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
 
-    public DcMotor getLeftFront() {
-        return leftFront;
+    public DcMotor getLeftFrontMotor() {
+        return leftFrontMotor;
     }
 
-    public DcMotor getRightFront() {
-        return rightFront;
+    public DcMotor getRightFrontMotor() {
+        return rightFrontMotor;
     }
 
-    public DcMotor getLeftBack() {
-        return leftBack;
+    public DcMotor getLeftBackMotor() {
+        return leftBackMotor;
     }
 
-    public DcMotor getRightBack() {
-        return rightBack;
+    public DcMotor getRightBackMotor() {
+        return rightBackMotor;
     }
 }
