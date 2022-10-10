@@ -1,4 +1,4 @@
-package ro.eminescusm.pm.mock.internal.motor;
+package ro.eminescusm.pm.mock.internal.hardware.motor;
 
 import ro.eminescusm.pm.mock.internal.hardware.HardwareDevice;
 
