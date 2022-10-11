@@ -60,8 +60,10 @@ public class OpModeStarter {
     }
 
     private void internalOpModeSetup(@NotNull OpMode opMode) {
+
+
         try {
-            for (Field field : opMode.getClass().getSuperclass().getDeclaredFields()) {
+            for (Field field : OpMode.class.getDeclaredFields()) {
                 if (field.getName().equals("hardwareMap")) {
                     field.setAccessible(true);
                     field.set(opMode, hardwareMap);
