@@ -21,16 +21,14 @@ public class OpModeStarter {
      * @param opMode the op mode to be executed
      */
     public void schedule(@NotNull OpMode opMode) {
-        schedule(opMode, 1, 3);
+        schedule(opMode, 1, 1);
     }
-
-    //TODO Rework input system
 
     /**
      * Schedules an op mode to be executed
      *
      * @param opMode       The op mode to be executed
-     * @param initDuration The duration of the init phase (in milliseconds)
+     * @param initDuration The duration of the init loop phase (in milliseconds)
      * @param loopDuration The duration of the loop phase (in milliseconds)
      */
     public void schedule(@NotNull OpMode opMode, int initDuration, int loopDuration) {
@@ -60,8 +58,6 @@ public class OpModeStarter {
     }
 
     private void internalOpModeSetup(@NotNull OpMode opMode) {
-
-
         try {
             for (Field field : OpMode.class.getDeclaredFields()) {
                 if (field.getName().equals("hardwareMap")) {
