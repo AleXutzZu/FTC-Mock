@@ -1,8 +1,7 @@
 package ro.eminescusm.pm.mock.internal.opmode;
 
 import ro.eminescusm.pm.mock.internal.gamepad.Gamepad;
-import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
-import ro.eminescusm.pm.mock.internal.impl.TelemetryImpl;
+import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Autonomous;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
 import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
@@ -87,5 +86,12 @@ public abstract class OpMode {
         } else {
             return null;
         }
+    }
+
+    /**
+     * Updates the telemetry. Internal use only.
+     */
+    private void internalUpdateTelemetry() {
+        telemetry.update();
     }
 }

@@ -1,6 +1,6 @@
-package ro.eminescusm.pm.mock.internal.hardware.motor;
+package ro.eminescusm.pm.mock.external.hardware.motor;
 
-import ro.eminescusm.pm.mock.internal.hardware.HardwareDevice;
+import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
 
 public interface DcMotorSimple extends HardwareDevice {
     /**

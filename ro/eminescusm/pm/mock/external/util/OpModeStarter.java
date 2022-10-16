@@ -1,7 +1,7 @@
-package ro.eminescusm.pm.mock.external.opmode;
+package ro.eminescusm.pm.mock.external.util;
 
 import com.sun.istack.internal.NotNull;
-import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.internal.opmode.OpMode;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Disabled;
 
@@ -21,7 +21,7 @@ public class OpModeStarter {
      * @param opMode the op mode to be executed
      */
     public void schedule(@NotNull OpMode opMode) {
-        schedule(opMode, 1, 1);
+        schedule(opMode, 1, 20000);
     }
 
     /**
@@ -51,6 +51,16 @@ public class OpModeStarter {
         long loopStartTime = System.currentTimeMillis();
         while (System.currentTimeMillis() - loopStartTime < loopDuration) {
             opMode.loop();
+            System.out.println("Running");
+
+            //wait for 200ms
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println(new String(new char[50]).replace("\0", "\r\n"));
         }
         opMode.stop();
 

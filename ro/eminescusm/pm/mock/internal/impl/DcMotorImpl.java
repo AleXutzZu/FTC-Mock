@@ -1,6 +1,6 @@
 package ro.eminescusm.pm.mock.internal.impl;
 
-import ro.eminescusm.pm.mock.internal.hardware.motor.DcMotor;
+import ro.eminescusm.pm.mock.external.hardware.motor.DcMotor;
 
 public class DcMotorImpl implements DcMotor {
     private int currentPosition = 0;

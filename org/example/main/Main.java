@@ -1,8 +1,8 @@
 package org.example.main;
 
 import org.example.opmode.BasicOpMode;
-import ro.eminescusm.pm.mock.external.opmode.DeclareHardware;
-import ro.eminescusm.pm.mock.external.opmode.OpModeStarter;
+import ro.eminescusm.pm.mock.external.util.DeclareHardware;
+import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 
 public class Main {
 

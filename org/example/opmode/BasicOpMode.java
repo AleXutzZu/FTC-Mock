@@ -1,6 +1,6 @@
 package org.example.opmode;
 
-import ro.eminescusm.pm.mock.external.RobotHardware;
+import ro.eminescusm.pm.mock.external.sample.RobotHardware;
 import ro.eminescusm.pm.mock.internal.opmode.OpMode;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
 

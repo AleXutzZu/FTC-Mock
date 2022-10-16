@@ -1,7 +1,7 @@
-package ro.eminescusm.pm.mock.external.opmode;
+package ro.eminescusm.pm.mock.external.util;
 
-import ro.eminescusm.pm.mock.internal.hardware.HardwareDevice;
-import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
+import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.internal.impl.DcMotorImpl;
 import ro.eminescusm.pm.mock.internal.impl.HardwareMapImpl;
 

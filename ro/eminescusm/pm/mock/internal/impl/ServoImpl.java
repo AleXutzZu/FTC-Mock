@@ -1,6 +1,6 @@
 package ro.eminescusm.pm.mock.internal.impl;
 
-import ro.eminescusm.pm.mock.internal.hardware.servo.Servo;
+import ro.eminescusm.pm.mock.external.hardware.servo.Servo;
 
 public class ServoImpl implements Servo {
     @Override

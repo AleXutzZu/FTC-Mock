@@ -1,6 +1,6 @@
-package ro.eminescusm.pm.mock.internal.hardware.servo;
+package ro.eminescusm.pm.mock.external.hardware.servo;
 
-import ro.eminescusm.pm.mock.internal.hardware.HardwareDevice;
+import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
 
 public interface Servo extends HardwareDevice {
     double MIN_POSITION = 0.0;

@@ -1,4 +1,4 @@
-package ro.eminescusm.pm.mock.internal.hardwareMap;
+package ro.eminescusm.pm.mock.external.opmode;
 
 import com.sun.istack.internal.Nullable;
 

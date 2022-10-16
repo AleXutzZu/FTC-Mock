@@ -1,7 +1,7 @@
-package ro.eminescusm.pm.mock.external;
+package ro.eminescusm.pm.mock.external.sample;
 
-import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
-import ro.eminescusm.pm.mock.internal.hardware.motor.DcMotor;
+import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
+import ro.eminescusm.pm.mock.external.hardware.motor.DcMotor;
 
 public class RobotHardware {
     private DcMotor leftFrontMotor = null;

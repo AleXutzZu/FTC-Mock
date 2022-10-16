@@ -1,8 +1,8 @@
 package ro.eminescusm.pm.mock.internal.impl;
 
 import com.sun.istack.internal.Nullable;
-import ro.eminescusm.pm.mock.internal.hardware.HardwareDevice;
-import ro.eminescusm.pm.mock.internal.hardwareMap.HardwareMap;
+import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
+import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 
 import java.util.HashMap;
 import java.util.List;
