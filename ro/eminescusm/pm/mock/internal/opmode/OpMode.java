@@ -91,7 +91,7 @@ public abstract class OpMode {
     /**
      * Updates the telemetry. Internal use only.
      */
-    private void internalUpdateTelemetry() {
-        telemetry.update();
+    private boolean internalUpdateTelemetry() {
+        return telemetry.update();
     }
 }
