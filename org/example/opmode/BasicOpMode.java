@@ -14,24 +14,19 @@ public class BasicOpMode extends OpMode {
     int count = 0;
     int loopCount = 0;
 
-    Telemetry.Line line1;
-    Telemetry.Item item1;
-    Telemetry.Item item2;
 
     @Override
     public void init() {
         hardware = new RobotHardware(hardwareMap);
         hardware.init();
         telemetry.clearAll();
-        line1 = telemetry.addLine("Hello World!");
-        item1 = line1.addData("count", count);
-        item2 = line1.addData("loopCount", loopCount);
     }
 
     @Override
     public void init_loop() {
         count++;
-        item1.setValue(count);
+        telemetry.addData("Count", count);
+        telemetry.addData("Loop count", loopCount);
     }
 
     @Override
@@ -42,11 +37,12 @@ public class BasicOpMode extends OpMode {
     @Override
     public void loop() {
         loopCount++;
-        item2.setValue(loopCount);
+        telemetry.addData("Count", count);
+        telemetry.addData("Loop count", loopCount);
     }
 
     @Override
     public void stop() {
-        item2.setValue(0);
+
     }
 }

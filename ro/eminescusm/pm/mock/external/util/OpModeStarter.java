@@ -73,7 +73,7 @@ public class OpModeStarter {
             internalAutoUpdateTelemetry(opMode);
         }
         opMode.stop();
-        internalAutoUpdateTelemetry(opMode);
+//        internalAutoUpdateTelemetry(opMode);
 
         System.out.println("OpMode " + opMode.getName() + " finished");
     }

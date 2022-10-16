@@ -13,7 +13,7 @@ public class TelemetryImpl implements Telemetry {
     private String captionValueSeparator = ": ";
     private int msTransmissionInterval = 250;
 
-    private boolean autoClear = false;
+    private boolean autoClear = true;
 
     private final List<Line> lines = new LinkedList<>();
     private final Log log = new LogImpl();
@@ -26,7 +26,7 @@ public class TelemetryImpl implements Telemetry {
     static class ItemImpl implements Item {
 
         private String caption = null;
-        private boolean retained = true;
+        private boolean retained = false;
         private Object value = null;
         private Func<?> valueProducer = null;
 
@@ -388,10 +388,6 @@ public class TelemetryImpl implements Telemetry {
                 e.printStackTrace();
             }
 
-            if (autoClear) {
-                clear();
-            }
-
             //Serialize data
             serializedLines.clear();
             for (Line line : lines) {
@@ -409,6 +405,11 @@ public class TelemetryImpl implements Telemetry {
                 serializedLines.add(sb.toString());
             }
             serializedLines.addAll(((LogImpl) log).getLogs());
+
+            if (autoClear) {
+                clear();
+            }
+
             return true;
         }
         return false;
