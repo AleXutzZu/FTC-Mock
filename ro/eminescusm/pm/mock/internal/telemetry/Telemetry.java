@@ -295,10 +295,22 @@ public interface Telemetry {
      */
     void clearAll();
 
+    /**
+     * Gets the separator used to separate the caption from the value in a {@link Telemetry.Item}
+     * @return the separator (default is ": ")
+     */
     String getCaptionValueSeparator();
 
+    /**
+     * Getts the separator used to separate the items in a {@link Telemetry.Line}
+     * @return the separator (default is " | ")
+     */
     String getItemSeparator();
 
+    /**
+     * Gets the minimum interval between transmissions of telemetry to the driver station
+     * @return the minimum interval between transmissions of telemetry to the driver station
+     */
     int getMsTransmissionInterval();
 
     /**
@@ -343,10 +355,22 @@ public interface Telemetry {
      */
     void setAutoClear(boolean autoClear);
 
+    /**
+     * Sets the separator to be used to separate the caption from the value in a {@link Telemetry.Item}
+     * @param captionValueSeparator the separator to be used to separate the caption from the value in a {@link Telemetry.Item}
+     */
     void setCaptionValueSeparator(String captionValueSeparator);
 
+    /**
+     * Sets the separator to be used to separate the items in a {@link Telemetry.Line}
+     * @param itemSeparator the separator to be used to separate the items in a {@link Telemetry.Line}
+     */
     void setItemSeparator(String itemSeparator);
 
+    /**
+     * Sets the minimum interval between transmissions of telemetry to the driver station
+     * @param msTransmissionInterval the minimum interval between transmissions of telemetry to the driver station
+     */
     void setMsTransmissionInterval(int msTransmissionInterval);
 
     boolean update();
