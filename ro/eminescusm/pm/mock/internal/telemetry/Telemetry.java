@@ -297,30 +297,35 @@ public interface Telemetry {
 
     /**
      * Gets the separator used to separate the caption from the value in a {@link Telemetry.Item}
+     *
      * @return the separator (default is ": ")
      */
     String getCaptionValueSeparator();
 
     /**
      * Getts the separator used to separate the items in a {@link Telemetry.Line}
+     *
      * @return the separator (default is " | ")
      */
     String getItemSeparator();
 
     /**
      * Gets the minimum interval between transmissions of telemetry to the driver station
+     *
      * @return the minimum interval between transmissions of telemetry to the driver station
      */
     int getMsTransmissionInterval();
 
     /**
      * Answers whether {@link Telemetry#clear()} is automatically called after each call to {@link Telemetry#update()}
+     *
      * @return whether {@link Telemetry#clear()} is automatically called after each call to {@link Telemetry#update()}
      */
     boolean isAutoClear();
 
     /**
      * Returns the log of this {@link Telemetry} to which log entries may be appended
+     *
      * @return the log of this {@link Telemetry}
      */
     Log log();
@@ -351,27 +356,36 @@ public interface Telemetry {
 
     /**
      * Sets whether {@link Telemetry#clear()} should be called automatically after each call to {@link Telemetry#update()}
+     *
      * @param autoClear whether {@link Telemetry#clear()} should be called automatically after each call to {@link Telemetry#update()}
      */
     void setAutoClear(boolean autoClear);
 
     /**
      * Sets the separator to be used to separate the caption from the value in a {@link Telemetry.Item}
+     *
      * @param captionValueSeparator the separator to be used to separate the caption from the value in a {@link Telemetry.Item}
      */
     void setCaptionValueSeparator(String captionValueSeparator);
 
     /**
      * Sets the separator to be used to separate the items in a {@link Telemetry.Line}
+     *
      * @param itemSeparator the separator to be used to separate the items in a {@link Telemetry.Line}
      */
     void setItemSeparator(String itemSeparator);
 
     /**
      * Sets the minimum interval between transmissions of telemetry to the driver station
+     *
      * @param msTransmissionInterval the minimum interval between transmissions of telemetry to the driver station
      */
     void setMsTransmissionInterval(int msTransmissionInterval);
 
+    /**
+     * Updates the driver station display if the minimum interval has elapsed since the last update
+     *
+     * @return true if the driver station display was updated, false otherwise
+     */
     boolean update();
 }
