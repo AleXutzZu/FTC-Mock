@@ -382,10 +382,14 @@ public class TelemetryImpl implements Telemetry {
             }
             //Await termination of all threads
             executors.shutdown();
-            try {
-                executors.awaitTermination(1, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (true) {
+                boolean terminated;
+                try {
+                    terminated = executors.awaitTermination(1, TimeUnit.SECONDS);
+                } catch (InterruptedException e) {
+                    terminated = true;
+                }
+                if (terminated) break;
             }
 
             //Serialize data
@@ -404,7 +408,23 @@ public class TelemetryImpl implements Telemetry {
                 }
                 serializedLines.add(sb.toString());
             }
-            serializedLines.addAll(((LogImpl) log).getLogs());
+
+            List<String> logs = ((LogImpl) log).getLogs();
+
+
+            int fromIndex = 0;
+            int toIndex = fromIndex + log.getCapacity();
+
+            if (toIndex > logs.size()) {
+                toIndex = logs.size();
+            }
+
+            //Reverse logs if DisplayOrder is NEWEST_FIRST
+            if (log.getDisplayOrder() == Log.DisplayOrder.NEWEST_FIRST) {
+                Collections.reverse(logs);
+            }
+
+            serializedLines.addAll(((LogImpl) log).getLogs().subList(fromIndex, toIndex));
 
             if (autoClear) {
                 clear();
