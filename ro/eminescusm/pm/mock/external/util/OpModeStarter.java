@@ -46,7 +46,7 @@ public class OpModeStarter {
             return;
         }
         internalOpModeSetup(opMode);
-        telemetry.addLine("Initializing...");
+        telemetry.addData("Status", "Initialized").setRetained(false);
 
         internalAutoUpdateTelemetry(opMode);
 
@@ -73,7 +73,7 @@ public class OpModeStarter {
             internalAutoUpdateTelemetry(opMode);
         }
         opMode.stop();
-//        internalAutoUpdateTelemetry(opMode);
+        internalAutoUpdateTelemetry(opMode);
 
         System.out.println("OpMode " + opMode.getName() + " finished");
     }
