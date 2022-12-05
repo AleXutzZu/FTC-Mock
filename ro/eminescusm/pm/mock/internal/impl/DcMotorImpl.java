@@ -11,7 +11,7 @@ public class DcMotorImpl implements DcMotor {
     private double power = 0;
     private final String deviceName;
 
-    public DcMotorImpl(String deviceName) {
+    DcMotorImpl(String deviceName) {
         this.deviceName = deviceName;
     }
 

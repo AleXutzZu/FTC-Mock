@@ -9,6 +9,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class TelemetryImpl implements Telemetry {
+
+    TelemetryImpl() {
+
+    }
     private String itemSeparator = " | ";
     private String captionValueSeparator = ": ";
     private int msTransmissionInterval = 250;
