@@ -2,7 +2,6 @@ package ro.eminescusm.pm.mock.internal.impl;
 
 import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
 import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
-import ro.eminescusm.pm.mock.external.util.DeclareHardware;
 import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 
 import java.util.ArrayList;
@@ -13,6 +12,9 @@ import java.util.Map;
 public class DeclareHardwareImpl implements DeclareHardware {
     private final Map<String, List<HardwareDevice>> allDevicesMap = new HashMap<>();
 
+    DeclareHardwareImpl() {
+
+    }
 
     public DeclareHardware addMotor(String motor) {
         //If a device with the name given already exists, add it to its list

@@ -1,6 +1,6 @@
-package ro.eminescusm.pm.mock.external.util;
+package ro.eminescusm.pm.mock.internal.impl;
 
-import ro.eminescusm.pm.mock.internal.impl.DeclareHardwareImpl;
+import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 
 public interface DeclareHardware {
 
