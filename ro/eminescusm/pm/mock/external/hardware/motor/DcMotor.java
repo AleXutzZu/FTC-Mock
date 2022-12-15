@@ -14,18 +14,6 @@ public interface DcMotor extends DcMotorSimple {
     }
 
     /**
-     * Gets the current position of the motor.
-     * @return the current position of the motor
-     */
-    int getCurrentPosition();
-
-    /**
-     * Sets the target position of the motor.
-     * @param position the target position of the motor
-     */
-    void setTargetPosition(int position);
-
-    /**
      * Gets the mode of the motor.
      * @return
      */
@@ -54,10 +42,4 @@ public interface DcMotor extends DcMotorSimple {
      * @return true if the motor is busy
      */
     boolean isBusy();
-
-    /**
-     * Gets the target position of the motor.
-     * @return the target position of the motor
-     */
-    int getTargetPosition();
 }

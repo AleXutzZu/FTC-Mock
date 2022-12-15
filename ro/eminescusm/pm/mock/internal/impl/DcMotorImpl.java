@@ -3,8 +3,6 @@ package ro.eminescusm.pm.mock.internal.impl;
 import ro.eminescusm.pm.mock.external.hardware.motor.DcMotor;
 
 public class DcMotorImpl implements DcMotor {
-    private int currentPosition = 0;
-    private int targetPosition = 0;
     private RunMode mode = RunMode.RUN_WITHOUT_ENCODER;
     private ZeroPowerBehavior zeroPowerBehavior = ZeroPowerBehavior.FLOAT;
     private Direction direction = Direction.FORWARD;
@@ -15,16 +13,6 @@ public class DcMotorImpl implements DcMotor {
         this.deviceName = deviceName;
     }
 
-
-    @Override
-    public int getCurrentPosition() {
-        return currentPosition;
-    }
-
-    @Override
-    public void setTargetPosition(int position) {
-        targetPosition = position;
-    }
 
     @Override
     public RunMode getMode() {
@@ -48,12 +36,7 @@ public class DcMotorImpl implements DcMotor {
 
     @Override
     public boolean isBusy() {
-        return (currentPosition < targetPosition && power > 0) || (currentPosition > targetPosition && power < 0);
-    }
-
-    @Override
-    public int getTargetPosition() {
-        return targetPosition;
+        return power != 0;
     }
 
     @Override
