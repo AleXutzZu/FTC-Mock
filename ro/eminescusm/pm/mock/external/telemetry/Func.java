@@ -1,4 +1,4 @@
-package ro.eminescusm.pm.mock.internal.telemetry;
+package ro.eminescusm.pm.mock.external.telemetry;
 
 @FunctionalInterface
 public interface Func<T> {

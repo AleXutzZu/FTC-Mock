@@ -1,7 +1,7 @@
 package ro.eminescusm.pm.mock.internal.impl;
 
-import ro.eminescusm.pm.mock.internal.telemetry.Func;
-import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
+import ro.eminescusm.pm.mock.external.telemetry.Func;
+import ro.eminescusm.pm.mock.external.telemetry.Telemetry;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;
