@@ -1,5 +1,7 @@
 package ro.eminescusm.pm.mock.external.sample;
 
+import ro.eminescusm.pm.mock.external.hardware.sensors.DistanceSensor;
+import ro.eminescusm.pm.mock.external.hardware.servo.Servo;
 import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.external.hardware.motor.DcMotor;
 
@@ -8,6 +10,14 @@ public class RobotHardware {
     private DcMotor rightFrontMotor = null;
     private DcMotor leftBackMotor = null;
     private DcMotor rightBackMotor = null;
+
+    private Servo leftServo = null;
+    private Servo rightServo = null;
+
+    private DistanceSensor rearDistanceSensor = null;
+    private DistanceSensor frontDistanceSensor = null;
+    private DistanceSensor leftDistanceSensor = null;
+    private DistanceSensor rightDistanceSensor = null;
 
     private final HardwareMap hardwareMap;
 
@@ -39,6 +49,14 @@ public class RobotHardware {
         rightFrontMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         leftBackMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightBackMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
+        leftServo = hardwareMap.get(Servo.class, "leftServo");
+        rightServo = hardwareMap.get(Servo.class, "rightServo");
+
+        rearDistanceSensor = hardwareMap.get(DistanceSensor.class, "rearDistanceSensor");
+        frontDistanceSensor = hardwareMap.get(DistanceSensor.class, "frontDistanceSensor");
+        leftDistanceSensor = hardwareMap.get(DistanceSensor.class, "leftDistanceSensor");
+        rightDistanceSensor = hardwareMap.get(DistanceSensor.class, "rightDistanceSensor");
     }
 
     public DcMotor getLeftFrontMotor() {
@@ -55,5 +73,29 @@ public class RobotHardware {
 
     public DcMotor getRightBackMotor() {
         return rightBackMotor;
+    }
+
+    public Servo getLeftServo() {
+        return leftServo;
+    }
+
+    public Servo getRightServo() {
+        return rightServo;
+    }
+
+    public DistanceSensor getRearDistanceSensor() {
+        return rearDistanceSensor;
+    }
+
+    public DistanceSensor getFrontDistanceSensor() {
+        return frontDistanceSensor;
+    }
+
+    public DistanceSensor getLeftDistanceSensor() {
+        return leftDistanceSensor;
+    }
+
+    public DistanceSensor getRightDistanceSensor() {
+        return rightDistanceSensor;
     }
 }
