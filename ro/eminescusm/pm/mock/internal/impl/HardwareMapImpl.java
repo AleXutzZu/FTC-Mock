@@ -31,7 +31,7 @@ public class HardwareMapImpl implements HardwareMap {
         return result;
     }
 
-    public static class Builder {
+    static class Builder {
         public void setAllDevicesMap(Map<String, List<HardwareDevice>> allDevicesMap) {
             this.allDevicesMap = allDevicesMap;
         }
