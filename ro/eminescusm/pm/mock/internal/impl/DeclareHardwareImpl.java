@@ -13,6 +13,8 @@ import java.util.Map;
 public class DeclareHardwareImpl implements DeclareHardware {
     private final Map<String, List<HardwareDevice>> allDevicesMap = new HashMap<>();
 
+    DeclareHardwareImpl() {
+    }
 
     public DeclareHardware addMotor(String motor) {
         //If a device with the name given already exists, add it to its list
