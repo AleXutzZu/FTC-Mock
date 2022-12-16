@@ -1,26 +1,15 @@
 package ro.eminescusm.pm.mock.internal.opmode;
 
-import ro.eminescusm.pm.mock.internal.gamepad.Gamepad;
 import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
+import ro.eminescusm.pm.mock.external.telemetry.Telemetry;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Autonomous;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
-import ro.eminescusm.pm.mock.external.telemetry.Telemetry;
 
 public abstract class OpMode {
     /**
      * The hardware map for the op mode
      */
     protected HardwareMap hardwareMap = null;
-
-    /**
-     * Gamepad 1
-     */
-    protected Gamepad gamepad1 = null;
-
-    /**
-     * Gamepad 2
-     */
-    protected Gamepad gamepad2 = null;
 
     /**
      * The telemetry for the op mode
