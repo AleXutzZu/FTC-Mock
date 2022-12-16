@@ -5,7 +5,7 @@ import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 import ro.eminescusm.pm.mock.internal.opmode.OpMode;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Disabled;
-import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
+import ro.eminescusm.pm.mock.external.telemetry.Telemetry;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

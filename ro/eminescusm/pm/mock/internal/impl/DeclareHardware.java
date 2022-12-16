@@ -2,6 +2,8 @@ package ro.eminescusm.pm.mock.internal.impl;
 
 import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 
+import java.lang.reflect.InvocationTargetException;
+
 public interface DeclareHardware {
 
     /**
@@ -29,6 +31,13 @@ public interface DeclareHardware {
      * @return a new DeclareHardware object
      */
     static DeclareHardware getInstance() {
-        return new DeclareHardwareImpl();
+        //Use reflection to create a new instance of the DeclareHardwareImpl class
+
+        try {
+            return DeclareHardwareImpl.class.getDeclaredConstructor().newInstance();
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
+                 NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

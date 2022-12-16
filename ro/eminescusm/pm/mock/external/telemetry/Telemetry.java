@@ -1,4 +1,4 @@
-package ro.eminescusm.pm.mock.internal.telemetry;
+package ro.eminescusm.pm.mock.external.telemetry;
 
 /**
  * Instances of {@link Telemetry} provide a means by which data can be transmitted from the robot

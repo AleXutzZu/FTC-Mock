@@ -14,11 +14,12 @@ public class DistanceSensorImpl implements DistanceSensor {
 
     @Override
     public String getDeviceName() {
-        return null;
+        return deviceName;
     }
 
     @Override
     public double getDistance(DistanceUnit unit) {
-        return 0;
+        //Return a random number but in the specified unit
+        return unit.fromCm(Math.random() * 200);
     }
 }

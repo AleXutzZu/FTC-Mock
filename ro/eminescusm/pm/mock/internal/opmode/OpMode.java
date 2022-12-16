@@ -4,7 +4,7 @@ import ro.eminescusm.pm.mock.internal.gamepad.Gamepad;
 import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.Autonomous;
 import ro.eminescusm.pm.mock.internal.opmode.annotations.TeleOp;
-import ro.eminescusm.pm.mock.internal.telemetry.Telemetry;
+import ro.eminescusm.pm.mock.external.telemetry.Telemetry;
 
 public abstract class OpMode {
     /**
