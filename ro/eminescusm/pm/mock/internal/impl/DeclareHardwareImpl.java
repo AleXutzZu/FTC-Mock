@@ -2,7 +2,6 @@ package ro.eminescusm.pm.mock.internal.impl;
 
 import ro.eminescusm.pm.mock.external.hardware.HardwareDevice;
 import ro.eminescusm.pm.mock.external.opmode.HardwareMap;
-import ro.eminescusm.pm.mock.external.util.DeclareHardware;
 import ro.eminescusm.pm.mock.external.util.OpModeStarter;
 
 import java.util.ArrayList;

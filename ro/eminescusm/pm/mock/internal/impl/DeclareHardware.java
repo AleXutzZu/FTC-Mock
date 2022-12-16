@@ -22,7 +22,44 @@ public interface DeclareHardware {
      */
     DeclareHardware addMotors(String... motorNames);
 
+    /**
+     * Adds a servo to the list of servos that will be used in the OpMode.
+     *
+     * @param servoName the name of the servo
+     * @return the current DeclareHardware object
+     */
+    DeclareHardware addServo(String servoName);
 
+    /**
+     * Adds multiple servos to the list of servos that will be used in the OpMode.
+     *
+     * @param servoNames the names of the servos
+     * @return the current DeclareHardware object
+     */
+    DeclareHardware addServos(String... servoNames);
+
+    /**
+     * Adds a sensor to the list of sensors that will be used in the OpMode.
+     *
+     * @param distanceSensorName the name of the distance sensor
+     * @return the current DeclareHardware object
+     */
+    DeclareHardware addDistanceSensor(String distanceSensorName);
+
+    /**
+     * Adds multiple sensors to the list of sensors that will be used in the OpMode.
+     *
+     * @param distanceSensorNames the names of the distance sensors
+     * @return the current DeclareHardware object
+     */
+    DeclareHardware addDistanceSensors(String... distanceSensorNames);
+
+
+    /**
+     * Returns the OpModeStarter object that will be used to start the OpMode.
+     *
+     * @return the OpModeStarter object with the registered motors, servos and sensors
+     */
     OpModeStarter getStartOpMode();
 
     /**
