@@ -1,0 +1,12 @@
+org.example.main
+ro.eminescusm.pm.mock.external.hardware
+ro.eminescusm.pm.mock.external.hardware.motor
+ro.eminescusm.pm.mock.external.hardware.sensors
+ro.eminescusm.pm.mock.external.hardware.servo
+ro.eminescusm.pm.mock.external.opmode
+ro.eminescusm.pm.mock.external.sample
+ro.eminescusm.pm.mock.external.telemetry
+ro.eminescusm.pm.mock.external.util
+ro.eminescusm.pm.mock.internal.impl
+ro.eminescusm.pm.mock.internal.opmode
+ro.eminescusm.pm.mock.internal.opmode.annotations
